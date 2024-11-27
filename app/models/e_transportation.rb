@@ -1,0 +1,2 @@
+class ETransportation < ApplicationRecord
+end
