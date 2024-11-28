@@ -7,4 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  namespace :api do
+    namespace :v1 do
+      resources :e_transportations, only: [:create, :index]
+      get 'e_transportations/outside_zone', to: 'e_transportations#outside_zone'
+    end
+  end
 end

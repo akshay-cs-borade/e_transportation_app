@@ -40,7 +40,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
   gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'pry'
+  gem 'byebug'
   gem 'dotenv-rails'
 end
 
@@ -49,3 +49,4 @@ group :development do
   # gem "spring"
 end
 
+gem 'pry'

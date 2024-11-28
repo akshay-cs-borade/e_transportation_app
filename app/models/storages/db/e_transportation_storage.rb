@@ -10,9 +10,9 @@ module Storages
       end
     
       def outside_zone_grouped
-        ETransportation.where(in_zone: false)
-                      .group(:e_transportation_type, :sensor_type)
-                      .count
+        data = ETransportation.where(in_zone: false)
+                      .group(:e_transportation_type, :sensor_type).count
+        data.map { |key, value| [key.join(" - "), value] }.to_h                
       end
     end  
   end
